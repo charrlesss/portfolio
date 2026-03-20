@@ -248,17 +248,6 @@ export default function Projects() {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     ></iframe>
-
-                    {/* <video
-                      controls
-                      poster={project.banner}
-                      // onLoadedData={() => setLoading(false)}
-                    >
-                      <source
-                        src="https://www.youtube.com/watch?v=5c4uv3WbZzo"
-                        type="video/mp4"
-                      />
-                    </video> */}
                   </div>
                   {project.description()}
                 </div>

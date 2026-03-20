@@ -361,6 +361,9 @@ svg.copy:hover path {
   .projects {
     height: auto;
   }
+   .carousel .arrow {
+    top: 25%;
+  }
 }
 @media (max-width: 900px) {
   .carousel .arrow {
@@ -458,7 +461,7 @@ svg.copy:hover path {
 }
 @media (max-width: 600px) {
   .carousel .arrow {
-    top: 18%;
+    top: 22%;
   }
   .skill-layer img {
     height: 30px;
@@ -551,7 +554,7 @@ svg.copy:hover path {
     font-size: 11px;
   }
   .carousel .arrow {
-    top: 18%;
+    top: 22%;
   }
 
   .grid-container {
@@ -564,7 +567,7 @@ svg.copy:hover path {
 }
 @media (max-width: 450px) {
   .carousel .arrow {
-    top: 15%;
+    top: 20%;
   }
   .skill-layer img {
     height: 25px;
@@ -583,7 +586,7 @@ svg.copy:hover path {
     color: rgba(180, 178, 178, 0.688);
   }
   .carousel .arrow {
-    top: 12%;
+    top: 19%;
     width: 30px;
     height: 30px;
   }
@@ -594,6 +597,6 @@ svg.copy:hover path {
 }
 @media (max-width: 350px) {
   .carousel .arrow {
-    top: 10%;
+    top: 17%;
   }
 }
