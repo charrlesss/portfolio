@@ -78,7 +78,7 @@
   flex: 1;
 }
 
-.video video {
+.video iframe {
   width: 100%;
   border-radius: 10px;
 }

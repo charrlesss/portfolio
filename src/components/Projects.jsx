@@ -1,11 +1,10 @@
-
 import accountinbanner from "../assets/accountinbanner.png";
 import claimsbanner from "../assets/claimsbanner.png";
 import tatersbanner from "../assets/tatersbanner.png";
 
-import taters from "../assets/video/taters.mp4";
-import accounting from "../assets/video/accounting.mp4";
-import claims from "../assets/video/claims.mp4";
+// import taters from "../assets/video/taters.mp4";
+// import accounting from "../assets/video/accounting.mp4";
+// import claims from "../assets/video/claims.mp4";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -14,7 +13,7 @@ import "../styles/Projects.css";
 const projects = [
   {
     id: 1,
-    src: accounting,
+    src: "https://www.youtube.com/embed/_UFPHO_bhW0",
     banner: accountinbanner,
     description: () => {
       return (
@@ -75,7 +74,7 @@ const projects = [
   },
   {
     id: 2,
-    src: claims,
+    src: "https://youtu.be/_3hiYGksRyc",
     banner: claimsbanner,
     description: () => {
       return (
@@ -127,7 +126,7 @@ const projects = [
   },
   {
     id: 3,
-    src: taters,
+    src: "https://youtu.be/dcoEY-X0tVs",
     banner: tatersbanner,
     description: () => {
       return (
@@ -166,7 +165,6 @@ const projects = [
 ];
 
 export default function Projects() {
-  const [loading, setLoading] = useState(true);
 
   const [index, setIndex] = useState(0);
 
@@ -238,37 +236,29 @@ export default function Projects() {
             {projects.map((project, i) => (
               <>
                 <div className="carousel-item" key={i}>
-                  {loading && (
-                    <div
-                      style={{
-                        position: "relative",
-                        top: 0,
-                        left: 0,
-                        width: "50%",
-                        height: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        background: "rgba(0,0,0,0.5)",
-                        color: "#fff",
-                        borderRadius: "5px",
-                      }}
-                    >
-                      Loading...
-                    </div>
-                  )}
-
                   <div
                     className="video"
-                    style={{ display: loading ? "none" : "block" }}
                   >
-                    <video
+                    <iframe
+                      width="600"
+                      height="340"
+                      src={project.src}
+                      title="Project Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+
+                    {/* <video
                       controls
                       poster={project.banner}
-                      onLoadedData={() => setLoading(false)}
+                      // onLoadedData={() => setLoading(false)}
                     >
-                      <source src={project.src} type="video/mp4" />
-                    </video>
+                      <source
+                        src="https://www.youtube.com/watch?v=5c4uv3WbZzo"
+                        type="video/mp4"
+                      />
+                    </video> */}
                   </div>
                   {project.description()}
                 </div>
