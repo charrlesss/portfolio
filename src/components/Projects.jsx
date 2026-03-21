@@ -74,7 +74,7 @@ const projects = [
   },
   {
     id: 2,
-    src: "https://youtu.be/_3hiYGksRyc",
+    src: "https://www.youtube.com/embed/_3hiYGksRyc",
     banner: claimsbanner,
     description: () => {
       return (
@@ -126,7 +126,7 @@ const projects = [
   },
   {
     id: 3,
-    src: "https://youtu.be/dcoEY-X0tVs",
+    src: "https://www.youtube.com/embed/dcoEY-X0tVs",
     banner: tatersbanner,
     description: () => {
       return (
