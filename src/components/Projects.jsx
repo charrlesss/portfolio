@@ -6,7 +6,7 @@ import tatersbanner from "../assets/tatersbanner.png";
 // import accounting from "../assets/video/accounting.mp4";
 // import claims from "../assets/video/claims.mp4";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "../styles/Projects.css";
 
@@ -165,7 +165,6 @@ const projects = [
 ];
 
 export default function Projects() {
-
   const [index, setIndex] = useState(0);
 
   const nextSlide = () => {
@@ -236,18 +235,8 @@ export default function Projects() {
             {projects.map((project, i) => (
               <>
                 <div className="carousel-item" key={i}>
-                  <div
-                    className="video"
-                  >
-                    <iframe
-                      width="600"
-                      height="340"
-                      src={project.src}
-                      title="Project Video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
+                  <div className="video">
+                    <Frame />
                   </div>
                   {project.description()}
                 </div>
@@ -293,5 +282,23 @@ export default function Projects() {
         </button>
       </motion.div>
     </section>
+  );
+}
+
+function Frame({ project }) {
+  const refFrame = useRef();
+
+
+  return (
+    <iframe
+      ref={refFrame}
+      width="600"
+      height="340"
+      src={project.src}
+      title="Project Video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
   );
 }
