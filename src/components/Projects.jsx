@@ -236,7 +236,7 @@ export default function Projects() {
               <>
                 <div className="carousel-item" key={i}>
                   <div className="video">
-                    <Frame />
+                    <Frame project={project}/>
                   </div>
                   {project.description()}
                 </div>
