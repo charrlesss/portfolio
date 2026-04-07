@@ -287,8 +287,6 @@ export default function Projects() {
 
 function Frame({ project }) {
   const refFrame = useRef();
-
-
   return (
     <iframe
       ref={refFrame}
