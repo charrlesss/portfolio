@@ -8,6 +8,7 @@ import tatersbanner from "../assets/tatersbanner.png";
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+
 import "../styles/Projects.css";
 
 const projects = [
