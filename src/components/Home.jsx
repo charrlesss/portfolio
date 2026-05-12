@@ -333,7 +333,7 @@ export default function Home() {
                       ></path>
                     </g>
                   </svg>
-                  (+63) 985-271-1185
+                  (+63) 909-989-7247
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
